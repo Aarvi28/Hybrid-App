@@ -1,0 +1,29 @@
+<!-- <GridLayout rows='auto,*' columns='2*,*'> -->
+<!-- <ScrollView>
+    <StackLayout>
+    <Label class='title' *ngFor='let n of name' [text]='n' horizontalAlignment='center'></Label>
+    </StackLayout>
+</ScrollView> -->
+<!-- <ListView [items]='name' (itemTap)='onItemTap($event)' >
+    <ng-template let-name='item' let-i='index'>
+        <GridLayout rows='40,auto' columns='50,*'>
+            <Label [text]='i' row='0' col='0' rowSpan ='2'></Label>
+            <Label [text]='name' row='0' col='1'></Label>
+            <Label text='Item Content row 2' row='1' col='1'></Label>
+        </GridLayout>
+    </ng-template>
+</ListView> -->
+<ns-action-bar [title]="'Current Challenge'">
+    <ActionItem android.position='actionBar' nsRouterLink='/challenges/replace'>
+        <Label text='Replace' ></Label>
+    </ActionItem>
+    <ActionItem android.position='actionBar' nsRouterLink='/challenges/edit'>
+        <Label text='Edit' ></Label>
+    </ActionItem>
+</ns-action-bar>
+<StackLayout>
+    <Label class='title' text='Current Challenge Page' horizontalAlignment='center'></Label>
+    <Button text='Change Status' (tap)='onChangeStatus()'></Button>
+</StackLayout>
+
+<!-- </GridLayout> -->
